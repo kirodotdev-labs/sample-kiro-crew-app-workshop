@@ -1,0 +1,38 @@
+{
+  "name": "backlog-factory-workshop",
+  "version": "1.1.0",
+  "displayName": "Backlog Factory Workshop",
+  "description": "An agentic software factory that turns GitHub issues into reviewed fixes: this guide app walks you through building Backlog Factory for the Kiro Crew workshop. Its page shows each step, and its guide agent does the typing. It asks before it changes a file and never writes to GitHub.",
+  "author": "Kiro Crew workshop",
+  "license": "MIT-0",
+  "iconPath": "assets/icon.png",
+  "agents": [
+    "agents/workshop-guide.json"
+  ],
+  "skills": [
+    "skills/workshop-guide"
+  ],
+  "tags": [
+    "workshop",
+    "github",
+    "issue-triage",
+    "open-source"
+  ],
+  "ui": {
+    "entry": "dist/index.mjs",
+    "pages": [
+      {
+        "route": "/apps/backlog-factory-workshop",
+        "label": "Backlog Factory Workshop",
+        "icon": "Star"
+      }
+    ]
+  },
+  "platform": {
+    "os": [
+      "macos",
+      "linux",
+      "windows"
+    ]
+  }
+}

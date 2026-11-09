@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+.venv/
+venv/
+
+# Node (only checkpoints/lab-3/ui uses it; ui/dist is committed on purpose)
+node_modules/
+
+# Files the app writes while you work through the labs (repo root only)
+/issues.json
+/backlog-factory/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Backlog Factory writes its board, repros, diffs and fix worktrees here
+/factory/

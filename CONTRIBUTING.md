@@ -1,5 +1,20 @@
 # Contributing Guidelines
 
+## About this repo
+
+This repo is workshop material for the Kiro Crew workshop "Build Your First
+Kiro Crew App". Issues #1 to #100 are seeded practice data about the sample
+project `jot`, including deliberate duplicates. Please do not comment on,
+close or relabel them: the workshop's `answer-key.md` and `data/issues.json`
+depend on them staying as they are. To practice on your own copy, fork the
+repo and turn on Issues in your fork (Settings, General, Features, Issues).
+
+The sample project `jot` runs its tests with:
+
+```bash
+python3 -m unittest discover -s tests
+```
+
 Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional
 documentation, we greatly value feedback and contributions from our community.
 
@@ -38,10 +53,6 @@ To send us a pull request, please:
 
 GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
 [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
-
-
-## Finding contributions to work on
-Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wontfix), looking at any 'help wanted' issues is a great place to start.
 
 
 ## Code of Conduct

@@ -1,0 +1,9 @@
+[
+  {
+    "name": "backlog-factory-workshop",
+    "gitUrl": "https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop",
+    "repo": "https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop",
+    "branch": "main",
+    "subdirectory": "workshop"
+  }
+]

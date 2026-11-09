@@ -1,0 +1,61 @@
+{
+  "name": "backlog-factory",
+  "version": "0.2.0",
+  "displayName": "Backlog Factory",
+  "description": "Lab 2 of Backlog Factory: sorts every open issue, then reproduces each bug in your clone with helper agents. Reads GitHub, never writes to it.",
+  "author": "Kiro Crew workshop",
+  "license": "MIT-0",
+  "iconPath": "assets/icon.png",
+  "agents": [
+    "agents/backlog-factory.json",
+    "agents/factory-reproducer.json"
+  ],
+  "skills": [
+    "skills/factory-triage",
+    "skills/factory-reproduce"
+  ],
+  "tags": [
+    "github",
+    "triage",
+    "software-factory"
+  ],
+  "backend": {
+    "hooks": {
+      "routes": "backend.routes:register_routes"
+    }
+  },
+  "ui": {
+    "entry": "dist/index.mjs",
+    "pages": [
+      {
+        "route": "/apps/backlog-factory",
+        "label": "Backlog Factory",
+        "icon": "Factory"
+      }
+    ]
+  },
+  "crons": [
+    {
+      "name": "factory-weekday",
+      "agent": "backlog-factory",
+      "cron_expr": "0 7 * * 1-5",
+      "timezone": "America/New_York",
+      "message": "Run one Backlog Factory pass: follow the factory-triage and factory-reproduce skills on the repo folder saved on the Backlog Factory page. Scheduled run: sort and reproduce only, write nothing to GitHub.",
+      "enabled": false
+    }
+  ],
+  "permissions": {
+    "api": [
+      "/api/crons",
+      "/api/apps/backlog-factory"
+    ],
+    "cron": true
+  },
+  "platform": {
+    "os": [
+      "macos",
+      "linux",
+      "windows"
+    ]
+  }
+}
