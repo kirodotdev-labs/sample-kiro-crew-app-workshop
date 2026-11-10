@@ -158,7 +158,7 @@ an explicit yes. Today's app stays a dry run.
 
 ```
 README.md            this handout
-CONTRIBUTING.md, CODE_OF_CONDUCT.md   how to contribute and report security issues
+CONTRIBUTING.md, CODE_OF_CONDUCT.md   no contributions accepted; how to report security issues
 LICENSE, THIRD-PARTY-NOTICES.md       MIT-0, plus the licenses of bundled fonts and artwork
 app-registry.json    lets Add Registry find the guide app
 workshop/            the Backlog Factory Workshop app: guide page + guide agent (install first)

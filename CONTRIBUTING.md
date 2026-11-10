@@ -1,58 +1,22 @@
 # Contributing Guidelines
 
-## About this repo
+This repository is sample material for the Kiro Crew workshop "Build Your First
+Kiro Crew App". **It is not accepting contributions.** Please do not open pull
+requests, and do not comment on, close or relabel the existing issues.
 
-This repo is workshop material for the Kiro Crew workshop "Build Your First
-Kiro Crew App". Issues #1 to #100 are seeded practice data about the sample
-project `jot`, including deliberate duplicates. Please do not comment on,
-close or relabel them: the workshop's `answer-key.md` and `data/issues.json`
-depend on them staying as they are. To practice on your own copy, fork the
-repo and turn on Issues in your fork (Settings, General, Features, Issues).
+The 100 issues (#1 to #101) and pull request #46 are seeded practice data about
+the sample project `jot`, including deliberate duplicates and a typo fix that is
+left open on purpose. The workshop's `answer-key.md` and `data/issues.json`
+depend on them staying as they are.
+
+To practice or build on the workshop, fork the repo and turn on Issues in your
+fork (Settings, General, Features, Issues).
 
 The sample project `jot` runs its tests with:
 
 ```bash
 python3 -m unittest discover -s tests
 ```
-
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional
-documentation, we greatly value feedback and contributions from our community.
-
-Please read through this document before submitting any issues or pull requests to ensure we have all the necessary
-information to effectively respond to your bug report or contribution.
-
-
-## Reporting Bugs/Feature Requests
-
-We welcome you to use the GitHub issue tracker to report bugs or suggest features.
-
-When filing an issue, please check existing open, or recently closed, issues to make sure somebody else hasn't already
-reported the issue. Please try to include as much information as you can. Details like these are incredibly useful:
-
-* A reproducible test case or series of steps
-* The version of our code being used
-* Any modifications you've made relevant to the bug
-* Anything unusual about your environment or deployment
-
-
-## Contributing via Pull Requests
-Contributions via pull requests are much appreciated. Before sending us a pull request, please ensure that:
-
-1. You are working against the latest source on the *main* branch.
-2. You check existing open, and recently merged, pull requests to make sure someone else hasn't addressed the problem already.
-3. You open an issue to discuss any significant work - we would hate for your time to be wasted.
-
-To send us a pull request, please:
-
-1. Fork the repository.
-2. Modify the source; please focus on the specific change you are contributing. If you also reformat all the code, it will be hard for us to focus on your change.
-3. Ensure local tests pass.
-4. Commit to your fork using clear commit messages.
-5. Send us a pull request, answering any default questions in the pull request interface.
-6. Pay attention to any automated CI failures reported in the pull request, and stay involved in the conversation.
-
-GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
-[creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
 
 ## Code of Conduct
@@ -67,4 +31,4 @@ If you discover a potential security issue in this project we ask that you notif
 
 ## Licensing
 
-See the [LICENSE](LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
+See the [LICENSE](LICENSE) file for our project's licensing.
