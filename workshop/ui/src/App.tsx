@@ -589,7 +589,7 @@ export default function AtoWorkshop() {
               <li>Repo: <code>https://github.com/{BASE_REPO}</code> → <b>Add Registry</b></li>
               <li>Search <b>Backlog Factory Workshop</b> → <b>Install</b> → <b>Trust this app and enable</b>, then press <b>Enable</b> on the app page</li>
             </ol>
-            <p className="see"><b>No git? Download ZIP:</b> <a href={ZIP_URL} target="_blank" rel="noreferrer">the repo as a ZIP ↗</a>, unzip it, then <b>Install from Path</b> in the same menu with its <code>backlog-factory-workshop</code> folder, and trust and enable it in <b>Library</b>.</p>
+            <p className="see"><b>No git? Download ZIP:</b> <a href={ZIP_URL} target="_blank" rel="noreferrer">the repo as a ZIP ↗</a>, unzip it, then <b>Install from Path</b> in the same menu with its <code>workshop</code> folder, and trust and enable it in <b>Library</b>.</p>
           </div>
         </section>
 

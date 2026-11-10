@@ -705,7 +705,7 @@ function AtoWorkshop() {
           ", unzip it, then ",
           /* @__PURE__ */ jsx("b", { children: "Install from Path" }),
           " in the same menu with its ",
-          /* @__PURE__ */ jsx("code", { children: "backlog-factory-workshop" }),
+          /* @__PURE__ */ jsx("code", { children: "workshop" }),
           " folder, and trust and enable it in ",
           /* @__PURE__ */ jsx("b", { children: "Library" }),
           "."

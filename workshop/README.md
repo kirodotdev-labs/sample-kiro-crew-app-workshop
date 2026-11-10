@@ -7,31 +7,29 @@ you through building your own app, and its guide agent does the typing.
 
 ## Install (Kiro Crew Stable 0.9.0)
 
-**From GitHub (main path, no GitHub sign-in, needs `git`):**
+**From your folder (main path, works for a clone or a ZIP):**
 
-1. In Kiro Crew: **Discover** → the database icon at the top right
-   (**Manage app sources**) → **Add Registry**.
-2. Repo: `https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop` → **Add Registry**.
-3. The app list shows **Backlog Factory Workshop** → **Install**.
-4. The trust dialog opens before anything is downloaded → **Trust this app and enable**.
-5. The app page opens with "Install complete" → **Enable**.
-   **Backlog Factory Workshop** now shows in the sidebar. Open it.
-
-**Fallback: No git? Download ZIP** (tested on a machine with no `git`):
-
-1. Download [the repo as a ZIP](https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop/archive/refs/heads/main.zip)
-   and unzip it. You get `sample-kiro-crew-app-workshop-main/`.
-2. **Discover** → database icon → **Install from Path** → paste the full path of
-   its `workshop` folder, for example
-   `/Users/you/Downloads/sample-kiro-crew-app-workshop-main/workshop` → **Install**.
+1. Get the repo: `git clone https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop.git`,
+   or with no `git`, download [the repo as a ZIP](https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop/archive/refs/heads/main.zip)
+   and unzip it (you get `sample-kiro-crew-app-workshop-main/`).
+2. In Kiro Crew: **Discover** → the database icon at the top right
+   (**Manage app sources**) → **Install from Path** → paste the full path of the
+   `workshop` folder inside it, for example
+   `/Users/you/sample-kiro-crew-app-workshop/workshop` → **Install**.
 3. **Library** → **Show N disabled apps** → **Backlog Factory Workshop** → **⋯** →
    **Enable** → **Trust this app and enable**.
+   **Backlog Factory Workshop** now shows in the sidebar. Open it.
 
-The guide works in the unzipped folder: Labs 1 and 2 need no git. Lab 3 (fix and
+Terminal instead of step 2: `kirocrew app install "$PWD/workshop"` (run from your
+folder's root). You still trust and enable it in the dashboard.
+
+**Also works with a clone: Add Registry** (needs `git`, no GitHub sign-in):
+**Discover** → database icon → **Add Registry** → Repo
+`https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop` → **Add Registry** →
+**Backlog Factory Workshop** → **Install** → **Trust this app and enable** → **Enable**.
+
+The guide works in a ZIP folder too: Labs 1 and 2 need no git. Lab 3 (fix and
 review on a local branch) needs git.
-
-Terminal instead of fallback step 2: `kirocrew app install "$PWD/workshop"`
-(run from your clone root). You still trust and enable it in the dashboard.
 
 No fork needed. The guide builds your app, **Backlog Factory**, inside
 this clone or ZIP, and nothing is written to GitHub.

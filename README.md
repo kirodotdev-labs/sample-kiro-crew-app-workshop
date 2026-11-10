@@ -74,15 +74,16 @@ token with **Public repositories (read-only)** access.
    Unzip it anywhere and use the unzipped folder (for example
    `~/Downloads/sample-kiro-crew-app-workshop-main`) as your folder.
 
-2. **Install the Backlog Factory Workshop app.** It is your guide for the rest of the session:
-   **Discover** → database icon (**Manage app sources**) → **Add Registry** →
-   Repo `https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop` → **Add Registry**.
-   The app list shows **Backlog Factory Workshop** → **Install** → **Trust this app
-   and enable** → **Enable** on the app page. Open **Backlog Factory Workshop** in the
-   sidebar and follow its steps. This path needs `git`.
-   No `git`? In the same menu use **Install from Path** with the full path of the
-   unzipped `workshop/` folder, then **Library** → **Show N disabled apps** →
-   **Backlog Factory Workshop** → **⋯** → **Enable** → **Trust this app and enable**.
+2. **Install the Backlog Factory Workshop app from your folder.** It is your guide for
+   the rest of the session, and it works the same for a clone or a ZIP:
+   **Discover** → database icon (**Manage app sources**) → **Install from Path** →
+   paste the full path of the `workshop` folder inside your folder, for example
+   `/Users/you/sample-kiro-crew-app-workshop/workshop` → **Install**.
+   Then **Library** → **Show N disabled apps** → **Backlog Factory Workshop** → **⋯** →
+   **Enable** → **Trust this app and enable**. Open **Backlog Factory Workshop** in the
+   sidebar and follow its steps.
+   Also works with a clone: **Add Registry** with the repo URL
+   `https://github.com/kirodotdev-labs/sample-kiro-crew-app-workshop` (needs `git`).
    Details: [workshop/README.md](workshop/README.md).
 
 **Dry run, always.** The whole room shares this one GitHub repo, so nothing you build
