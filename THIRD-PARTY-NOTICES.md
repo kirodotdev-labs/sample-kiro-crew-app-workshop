@@ -10,7 +10,8 @@ licensed under MIT-0 (see LICENSE).
 From Kiro Crew v0.9.0 (https://github.com/kirodotdev/KiroCrew), `website/src/assets/`
 
 - License: Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-- Bundled files: workshop/ui/dist/assets/ghosts/*.svg, workshop/ui/dist/assets/kirocrew-icon.png
+- Bundled files: workshop/ui/dist/assets/ghosts/*.svg, workshop/ui/dist/assets/kirocrew-icon.png,
+  checkpoints/lab-{1,2,3}/ui/dist/assets/kirocrew-icon.png
 - Distributed unmodified
 
 ## Fonts
@@ -20,7 +21,8 @@ Copyright 2020 The JetBrains Mono Project Authors
 (https://github.com/JetBrains/JetBrainsMono)
 
 - License: SIL Open Font License, Version 1.1 (OFL-1.1)
-- Bundled file: workshop/ui/dist/assets/fonts/JetBrainsMono-latin.woff2
+- Bundled files: workshop/ui/dist/assets/fonts/JetBrainsMono-latin.woff2,
+  checkpoints/lab-{1,2,3}/ui/dist/assets/fonts/JetBrainsMono-latin.woff2
 - Distributed unmodified (latin subset, woff2)
 
 ### Space Grotesk
@@ -28,7 +30,8 @@ Copyright 2020 The Space Grotesk Project Authors
 (https://github.com/floriankarsten/space-grotesk)
 
 - License: SIL Open Font License, Version 1.1 (OFL-1.1)
-- Bundled file: workshop/ui/dist/assets/fonts/SpaceGrotesk-latin.woff2
+- Bundled files: workshop/ui/dist/assets/fonts/SpaceGrotesk-latin.woff2,
+  checkpoints/lab-{1,2,3}/ui/dist/assets/fonts/SpaceGrotesk-latin.woff2
 - Distributed unmodified (latin subset, woff2)
 
 ## SIL Open Font License, Version 1.1
