@@ -16,7 +16,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 const APP = 'backlog-factory'
 const AGENT = 'backlog-factory'
 const API = `/api/apps/${APP}`
-const asset = (f: string) => new URL(`./assets/${f}`, import.meta.url).href
+// Base kept in a variable so Vite leaves this URL alone instead of turning it into an empty glob import.
+const moduleUrl = import.meta.url
+const asset = (f: string) => new URL(`./assets/${f}`, moduleUrl).href
 
 type Frame = { good?: string; whys?: string[]; root?: string; best?: string }
 type Round = { n: number; stat?: string; verdict?: string; note?: string }

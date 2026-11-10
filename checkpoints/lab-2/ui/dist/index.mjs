@@ -1,7 +1,7 @@
 import { jsx as r, jsxs as a, Fragment as u } from "react/jsx-runtime";
 import { useAppApi as xe, useNotify as ve, useTheme as ye, useChatLauncher as we } from "@kirocrew/app-sdk";
 import { useState as w, useRef as ee, useCallback as ke, useEffect as Ne, useMemo as Ce } from "react";
-const $e = "backlog-factory", re = "backlog-factory", F = `/api/apps/${$e}`, G = (n) => new URL((/* @__PURE__ */ Object.assign({}))[`./assets/${n}`], import.meta.url).href, Re = [
+const $e = "backlog-factory", re = "backlog-factory", F = `/api/apps/${$e}`, G = (n) => new URL(`./assets/${n}`, import.meta.url).href, Re = [
   { id: "inbox", label: "Inbox" },
   { id: "triage", label: "Triage" },
   { id: "reproduce", label: "Reproduce" },
