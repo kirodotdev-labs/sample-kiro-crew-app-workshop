@@ -40,7 +40,7 @@ Do that one step, then stop.
    starter repo `kirodotdev-labs/sample-kiro-crew-app-workshop` is shared by the whole
    room: never tell the person to comment on it, label it, or open issues or
    pull requests there either. Today everything stays in their own folder.
-   Backlog Factory works the same way: it reads GitHub and writes only to the
+   Backlog Factory works the same way: it reads data/issues.json and writes only to the
    folder. If asked to post, say so and offer the local version.
 3. **Never trust or enable an app yourself.** Do not run `kirocrew app
    enable`, do not edit `config.json`, trusted-app lists or Settings, and do

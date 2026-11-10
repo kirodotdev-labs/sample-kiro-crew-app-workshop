@@ -51,8 +51,8 @@ No GitHub account, token or fork is needed today.
 **Keep Approval mode on Normal.** The factory's agents run shell commands as you, so
 every command should ask first. Do not use Trust (auto-approve) for the factory.
 
-**Optional: no GitHub write access.** The factory reads issues with unauthenticated
-calls and never needs your GitHub credentials, but a `gh` login or stored `git` push
+**Optional: no GitHub write access.** The factory reads issues from `data/issues.json`
+and never needs your GitHub credentials, but a `gh` login or stored `git` push
 credentials on this machine are within its agents' reach. For extra safety, run
 `gh auth logout` for the session (and `gh auth login` afterwards), or use a fine-grained
 token with **Public repositories (read-only)** access.
@@ -87,14 +87,14 @@ token with **Public repositories (read-only)** access.
 
 **Dry run, always.** The whole room shares this one GitHub repo, so nothing you build
 today writes to it: no labels, comments, closes or pull requests. Backlog Factory reads
-the issues (one unauthenticated GitHub call, or `data/issues.json` offline) and writes
-only inside your folder.
+the issues from `data/issues.json`, never from GitHub, and writes only inside your folder.
 
-### Offline fallback
+### The issue file
 
 `data/issues.json` holds the repo's open issues, in the shape
-`gh issue list --state open --limit 200 --json number,title,body,labels` returns. The factory uses it when the
-GitHub call fails. **Offline issue data does not make the model work offline.**
+`gh issue list --state open --limit 200 --json number,title,body,labels` returns. The
+factory reads only this file, so a run makes no GitHub calls and the whole room avoids
+GitHub's rate limit. **The issue file does not make the model work offline.**
 
 ## The labs
 
@@ -144,7 +144,7 @@ guide sets it for you; after a copy by hand, type your folder and press **Save**
 
 | | Allowed |
 |---|---|
-| Read the open issues of `kirodotdev-labs/sample-kiro-crew-app-workshop` (or `data/issues.json`) | yes |
+| Read the open issues in `data/issues.json` | yes |
 | Write `factory/` in your folder: the board, repro notes, saved diffs, fix worktrees | yes, after your yes |
 | Make local branches `factory/fix-<n>` | yes (Lab 3), after your yes |
 | Merge a fix into your `main` | never: you do it |
@@ -164,7 +164,7 @@ app-registry.json    lets Add Registry find the guide app
 workshop/            the Backlog Factory Workshop app: guide page + guide agent (install first)
 answer-key.md        the expected board: bug groups, verdicts, reframes
 checkpoints/         lab-1, lab-2, lab-3: the Backlog Factory app folder after each lab
-data/issues.json     offline copy of the open issues
+data/issues.json     the open issues the factory reads (a copy of GitHub's list)
 seed/issues.json     all 100 issues as written, in order (used to seed the repo)
 scripts/             seed-issues.sh, refresh-offline-data.sh, build-offline-data.py
 jot/, tests/, JOT.md the sample project the issues are about

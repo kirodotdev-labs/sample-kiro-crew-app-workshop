@@ -1,7 +1,7 @@
 {
   "app": "backlog-factory",
   "repo": "kirodotdev-labs/sample-kiro-crew-app-workshop",
-  "source": "live",
+  "source": "issues.json",
   "updated": "2026-10-19T08:40:40Z",
   "run": {
     "state": "idle",

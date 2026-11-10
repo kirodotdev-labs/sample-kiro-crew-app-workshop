@@ -45,7 +45,7 @@ reports and vague reports go to Needs info; works-as-designed goes to Rejected.
 
 | # | Title | True kind | Lane | Root-cause group / duplicate-of | Verdict and reason | Reproduces? |
 |---:|---|---|---|---|---|---|
-| 1 | Typo in JOT.md: "seperate" | docs | Docs | - | Docs: typo fix. Outside PR #46 already fixes it: nothing to do | n/a |
+| 1 | Typo in JOT.md: "seperate" | docs | Docs | - | Docs: typo fix. (Outside PR #46 on GitHub already fixes it; the factory reads only data/issues.json, so it does not see PRs) | n/a |
 | 2 | jot crashes with JSONDecodeError after my laptop died | bug | Bug | A: empty/cut-off file (owner) | Build: load_notes() must handle an empty or truncated file | yes |
 | 3 | Add `jot edit` to change a note's text | feature | Feature | - | Build: `jot edit ID TEXT`, one subcommand | n/a |
 | 4 | UnicodeEncodeError when I add a note with an emoji (Windows) | bug | Bug | B: no UTF-8 encoding (owner) | Build: open() with encoding="utf-8" | windows-only |

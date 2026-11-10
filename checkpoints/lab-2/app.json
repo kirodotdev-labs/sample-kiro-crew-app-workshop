@@ -2,7 +2,7 @@
   "name": "backlog-factory",
   "version": "0.2.0",
   "displayName": "Backlog Factory",
-  "description": "Lab 2 of Backlog Factory: sorts every open issue, then reproduces each bug in your clone with helper agents. Reads GitHub, never writes to it.",
+  "description": "Lab 2 of Backlog Factory: sorts every open issue, then reproduces each bug in your clone with helper agents. Reads the issues from data/issues.json and never touches GitHub.",
   "author": "Kiro Crew workshop",
   "license": "MIT-0",
   "iconPath": "assets/icon.png",

@@ -2,7 +2,7 @@
   "name": "backlog-factory",
   "version": "0.1.0",
   "displayName": "Backlog Factory",
-  "description": "Lab 1 of Backlog Factory: sorts every open issue (good problem? five whys, first principles) onto a board. Reads GitHub, never writes to it.",
+  "description": "Lab 1 of Backlog Factory: sorts every open issue (good problem? five whys, first principles) onto a board. Reads the issues from data/issues.json and never touches GitHub.",
   "author": "Kiro Crew workshop",
   "license": "MIT-0",
   "iconPath": "assets/icon.png",

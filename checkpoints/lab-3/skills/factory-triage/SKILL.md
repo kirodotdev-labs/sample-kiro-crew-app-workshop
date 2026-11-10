@@ -1,6 +1,6 @@
 ---
 name: factory-triage
-description: Backlog Factory step 1. Read the open issues (GitHub read only, or data/issues.json offline), sort each one with the owner's framework (good problem? five whys, first principles), give it a verdict and a lane, and write factory/board.json for the Backlog Factory page. Use when asked to run the factory, sort or triage the backlog.
+description: Backlog Factory step 1. Read the open issues from data/issues.json (never GitHub), sort each one with the owner's framework (good problem? five whys, first principles), give it a verdict and a lane, and write factory/board.json for the Backlog Factory page. Use when asked to run the factory, sort or triage the backlog.
 ---
 
 # Triage: sort the backlog
@@ -21,22 +21,19 @@ You are the Backlog Factory. This skill is step 1 of a run. If the `factory-repr
 
 ## Rules
 
-1. **GitHub is read only.** Read the open issues with unauthenticated GET calls, one
-   page at a time, until a page comes back `[]` (a full page of 100 means there is more):
-   `curl -fsS "https://api.github.com/repos/kirodotdev-labs/sample-kiro-crew-app-workshop/issues?state=open&per_page=100&page=1"`
-   then `&page=2`, and so on. Drop items that have `pull_request` (they are PRs, not
-   issues). Save fetched pages only under `<repo>/factory/tmp/`, never `/tmp`
-   (a scratch copy; it needs no OK). Check: the count you sort equals the count you
-   read, and each card's `n` and `title` are the issue's own `number` and `title`, copied
-   from what you read (never retyped from memory). If a call fails, use
-   `<repo>/data/issues.json` and set `"source": "offline"`. Never comment, label, close,
-   edit, open issues or PRs. If asked, say: "Backlog Factory is a local factory. It writes
-   to your clone only; nothing goes to GitHub."
+1. **Issues come from `<repo>/data/issues.json`, never from GitHub.** Read that file once.
+   It holds the repo's open issues (`number`, `title`, `body`, `labels`), in the shape
+   `gh issue list --json` returns. Do not call GitHub or run any network command (no
+   `curl`, `gh`, `git fetch`). Check: the count you sort equals the count in the file, and
+   each card's `n` and `title` are the issue's own `number` and `title`, copied from the
+   file (never retyped from memory). Set `"source": "issues.json"`. Never comment, label,
+   close, edit, open issues or PRs. If asked, say: "Backlog Factory is a local factory. It
+   reads data/issues.json and writes to your clone only; nothing goes to GitHub."
 2. Before your first write, say in one line what you will write and ask
    `OK? (yes / no)`. Wait for yes. A scheduled run (no person) writes only `factory/`.
    After the yes, go on from what you already read; do not fetch or read it again.
    Never open `answer-key.md` or `seed/`: they are the person's check, not your input.
-3. Labels on GitHub are noisy on purpose. Decide the kind yourself.
+3. Labels are noisy on purpose. Decide the kind yourself.
 4. Write `board.json` early (all issues in `inbox`), then again after every 10 issues,
    so the page fills while you work.
 5. **The board is the memory.** If `board.json` already exists, keep every card whose
@@ -111,7 +108,7 @@ Write valid JSON, UTF-8, this shape (omit empty fields):
 {
   "app": "backlog-factory",
   "repo": "kirodotdev-labs/sample-kiro-crew-app-workshop",
-  "source": "live",
+  "source": "issues.json",
   "updated": "2026-10-19T15:02:00Z",
   "run": {"state": "running", "step": "triage 20/47"},
   "github_writes": 0,
