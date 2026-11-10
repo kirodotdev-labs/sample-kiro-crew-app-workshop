@@ -6,16 +6,15 @@ The output has the same shape as
     gh issue list -R kirodotdev-labs/sample-kiro-crew-app-workshop --state open --limit 200 \
       --json number,title,body,labels
 
-on the base repo right after scripts/seed-issues.sh --apply:
+(the format the workshop's issue file has always used):
 
 - a JSON array, newest issue first (gh's default sort),
 - each item has exactly the keys body, labels, number, title,
 - each label has id, name, description, color.
 
-Numbers follow seed order: the first seeded issue is #1.
-Label ids are placeholders ("LA_offline_<name>"). GitHub's real ids are only
-known after seeding; scripts/refresh-offline-data.sh replaces this file with
-the live output.
+Numbers follow seed order from #1, skipping #46 (the answer key's numbering).
+Label ids are placeholders ("LA_offline_<name>"); the shipped file keeps the ids
+it was first built with, which the factory ignores.
 
 Usage: python3 scripts/build-offline-data.py
 """
@@ -54,7 +53,8 @@ def label_obj(name: str) -> dict:
 def main() -> None:
     seed = json.loads((ROOT / "seed" / "issues.json").read_text(encoding="utf-8"))
     items = []
-    for number, issue in enumerate(seed, start=1):
+    for i, issue in enumerate(seed, start=1):
+        number = i if i < 46 else i + 1  # #46 is skipped
         items.append(
             {
                 "body": issue["body"],

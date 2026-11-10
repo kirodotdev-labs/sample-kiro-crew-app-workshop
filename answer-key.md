@@ -1,11 +1,10 @@
 # Answer key: Backlog Factory
 
-The expected result for the **100 open issues** of `kirodotdev-labs/sample-kiro-crew-app-workshop`:
-#1-#101 except #46 (an outside pull request that fixes #1; leave it alone). Same set as
-`data/issues.json` and `seed/issues.json`. Use it in the **Check** step: compare
+The expected result for the **100 practice issues** in `data/issues.json`:
+#1-#101, with no #46 (the number is skipped). Same set as `seed/issues.json`. Use it in the **Check** step: compare
 `factory/board.json` with this page.
 
-Labels on GitHub are noisy on purpose (some are wrong on purpose). The factory decides
+Labels are noisy on purpose (some are wrong on purpose). The factory decides
 the kind itself. Wording does not matter; an argued, different verdict on a small feature
 is fine to discuss.
 
@@ -45,7 +44,7 @@ reports and vague reports go to Needs info; works-as-designed goes to Rejected.
 
 | # | Title | True kind | Lane | Root-cause group / duplicate-of | Verdict and reason | Reproduces? |
 |---:|---|---|---|---|---|---|
-| 1 | Typo in JOT.md: "seperate" | docs | Docs | - | Docs: typo fix. (Outside PR #46 on GitHub already fixes it; the factory reads only data/issues.json, so it does not see PRs) | n/a |
+| 1 | Typo in JOT.md: "seperate" | docs | Docs | - | Docs: typo fix | n/a |
 | 2 | jot crashes with JSONDecodeError after my laptop died | bug | Bug | A: empty/cut-off file (owner) | Build: load_notes() must handle an empty or truncated file | yes |
 | 3 | Add `jot edit` to change a note's text | feature | Feature | - | Build: `jot edit ID TEXT`, one subcommand | n/a |
 | 4 | UnicodeEncodeError when I add a note with an emoji (Windows) | bug | Bug | B: no UTF-8 encoding (owner) | Build: open() with encoding="utf-8" | windows-only |

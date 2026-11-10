@@ -4,13 +4,11 @@ This repository is sample material for the Kiro Crew workshop "Build Your First
 Kiro Crew App". **It is not accepting contributions.** Please do not open pull
 requests, and do not comment on, close or relabel the existing issues.
 
-The 100 issues (#1 to #101) and pull request #46 are seeded practice data about
-the sample project `jot`, including deliberate duplicates and a typo fix that is
-left open on purpose. The workshop's `answer-key.md` and `data/issues.json`
-depend on them staying as they are.
+The workshop's 100 practice issues about the sample project `jot` live in
+`data/issues.json`, not in GitHub Issues. They include deliberate duplicates, and
+`answer-key.md` depends on them staying as they are.
 
-To practice or build on the workshop, fork the repo and turn on Issues in your
-fork (Settings, General, Features, Issues).
+To practice or build on the workshop, fork the repo or download it as a ZIP.
 
 The sample project `jot` runs its tests with:
 

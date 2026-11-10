@@ -65,7 +65,6 @@ function isLight(sdkMode: string): boolean {
   return /light/.test(sdkMode || '')
 }
 const reduced = () => typeof window !== 'undefined' && !!window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-const issueUrl = (repo: string | undefined, n: number) => `https://github.com/${repo || 'kirodotdev-labs/sample-kiro-crew-app-workshop'}/issues/${n}`
 
 const CSS = `
 @font-face{font-family:"BF Space Grotesk";font-weight:400 700;font-display:swap;src:url("${asset('fonts/SpaceGrotesk-latin.woff2')}") format("woff2")}
@@ -286,7 +285,7 @@ export default function BacklogFactory() {
               <h3><span>{L.label}</span><span>{cards.length}</span></h3>
               {cards.map((c, i) => (
                 <article key={c.n} className={`card rv ${laneOf(c) === 'fix' ? 'hot' : ''}`} style={{ ['--i' as any]: i }}>
-                  <div className="num"><a href={issueUrl(board?.repo, c.n)} target="_blank" rel="noreferrer">#{c.n}</a></div>
+                  <div className="num">#{c.n}</div>
                   <div className="t">{c.title}</div>
                   <Chips c={c} />
                   {c.reason && <div className="why">{c.reason}</div>}

@@ -22,7 +22,7 @@ You are the Backlog Factory. This skill is step 1 of a run. If the `factory-repr
 ## Rules
 
 1. **Issues come from `<repo>/data/issues.json`, never from GitHub.** Read that file once.
-   It holds the repo's open issues (`number`, `title`, `body`, `labels`), in the shape
+   It holds the 100 practice issues (`number`, `title`, `body`, `labels`), in the shape
    `gh issue list --json` returns. Do not call GitHub or run any network command (no
    `curl`, `gh`, `git fetch`). Check: the count you sort equals the count in the file, and
    each card's `n` and `title` are the issue's own `number` and `title`, copied from the

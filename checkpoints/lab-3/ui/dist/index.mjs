@@ -231,7 +231,7 @@ function De() {
             /* @__PURE__ */ r("span", { children: c.length })
           ] }),
           c.map((d, g) => /* @__PURE__ */ a("article", { className: `card rv ${h(d) === "fix" ? "hot" : ""}`, style: { "--i": g }, children: [
-            /* @__PURE__ */ r("div", { className: "num", children: /* @__PURE__ */ a("a", { href: _e(o == null ? void 0 : o.repo, d.n), target: "_blank", rel: "noreferrer", children: [
+            /* @__PURE__ */ r("div", { className: "num", children: /* @__PURE__ */ a("span", { children: [
               "#",
               d.n
             ] }) }),

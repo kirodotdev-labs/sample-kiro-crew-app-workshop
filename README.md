@@ -91,10 +91,10 @@ the issues from `data/issues.json`, never from GitHub, and writes only inside yo
 
 ### The issue file
 
-`data/issues.json` holds the repo's open issues, in the shape
-`gh issue list --state open --limit 200 --json number,title,body,labels` returns. The
-factory reads only this file, so a run makes no GitHub calls and the whole room avoids
-GitHub's rate limit. **The issue file does not make the model work offline.**
+`data/issues.json` holds the 100 practice issues, in the shape
+`gh issue list --json number,title,body,labels` returns. They live only in this file, not
+in the repo's GitHub Issues. The factory reads only this file, so a run makes no GitHub
+calls. **The issue file does not make the model work offline.**
 
 ## The labs
 
@@ -164,9 +164,9 @@ app-registry.json    lets Add Registry find the guide app
 workshop/            the Backlog Factory Workshop app: guide page + guide agent (install first)
 answer-key.md        the expected board: bug groups, verdicts, reframes
 checkpoints/         lab-1, lab-2, lab-3: the Backlog Factory app folder after each lab
-data/issues.json     the open issues the factory reads (a copy of GitHub's list)
-seed/issues.json     all 100 issues as written, in order (used to seed the repo)
-scripts/             seed-issues.sh, refresh-offline-data.sh, build-offline-data.py
+data/issues.json     the 100 practice issues the factory reads
+seed/issues.json     the same issues as written, in order (source for data/issues.json)
+scripts/             build-offline-data.py (rebuilds data/issues.json from seed/)
 jot/, tests/, JOT.md the sample project the issues are about
 ```
 
